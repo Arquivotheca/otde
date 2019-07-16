@@ -1830,6 +1830,9 @@ void KHTMLWidget::blockEndDiv( HTMLClueV *_clue, HTMLStackElem *Elem)
     flow = 0;
 }
 
+/**
+ * TODO: Fix all issues with setLocale in this function. It is commented out for now.
+ */
 void KHTMLWidget::parse()
 {
 //    emit documentStarted();
