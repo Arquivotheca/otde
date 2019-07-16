@@ -681,16 +681,16 @@ QPixmap KWM::miniIcon(Window w, int width, int height){
 		 &x, &y, &w, &h, &border_w, &depth);
     if (w > 0 && h > 0){
       QPixmap pm(w, h, depth);
-      XCopyArea(qt_xdisplay(), p, pm.handle(),
-		qt_xget_temp_gc(depth==1),
-		0, 0, w, h, 0, 0);
-      if (p_mask != None){
-	QBitmap bm(w, h);
-	XCopyArea(qt_xdisplay(), p_mask, bm.handle(),
-		  qt_xget_temp_gc(TRUE),
-		  0, 0, w, h, 0, 0);
-	pm.setMask(bm);
-      }
+      //XCopyArea(qt_xdisplay(), p, pm.handle(),
+	//	qt_xget_temp_gc(depth==1),
+	//	0, 0, w, h, 0, 0);
+//      if (p_mask != None){
+//	QBitmap bm(w, h);
+//	XCopyArea(qt_xdisplay(), p_mask, bm.handle(),
+//		  qt_xget_temp_gc(TRUE),
+//		  0, 0, w, h, 0, 0);
+//	pm.setMask(bm);
+//      }
       if (width > 0 && height > 0 && (w > (unsigned int)width
 				      || h > (unsigned int) height)){
 	// scale
