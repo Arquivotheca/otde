@@ -1887,19 +1887,19 @@ void KHTMLWidget::parse()
     font_stack.clear();
     HTMLFont f( settings->fontBaseFace, settings->fontBaseSize, settings->fontSizes );
     // set the initial charset
-    if(!overrideCharset.isEmpty())
+    /*if(!overrideCharset.isEmpty())
 	f.setCharset(overrideCharset);
     else
-	f.setCharset(kapp->getCharsets()->defaultCharset().name());
+	f.setCharset(kapp->getCharsets()->defaultCharset().name());*/
     //f.setCharset(settings->charset);
     f.setTextColor( settings->fontBaseColor );
     const HTMLFont *fp = pFontManager->getFont( f );
     font_stack.push( fp );
 
-    if(!overrideCharset.isEmpty())
+    /*if(!overrideCharset.isEmpty())
 	setCharset(overrideCharset);
     else
-	setCharset(kapp->getCharsets()->defaultCharset().name());
+	setCharset(kapp->getCharsets()->defaultCharset().name());*/
 
     // reset form related stuff
     formList.clear();
