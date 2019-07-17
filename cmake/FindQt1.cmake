@@ -26,6 +26,7 @@ if(UNIX)
 
   find_library(QT_LIBRARIES qt
     /opt/qt1/lib64
+    /opt/qt1/lib
     ${QT1_LIBRARY_DIR}
     )
 
