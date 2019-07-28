@@ -726,7 +726,7 @@ bool KHTMLView::gotoXY(int _x, int _y)
 
 void KHTMLView::setCharset( const char *_c)
 {
-    view->setCharset(_c);
+    //view->setCharset(_c);
 }
 
 void 
