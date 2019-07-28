@@ -97,7 +97,7 @@ bool KCharsetConverterData::initialize(const KCharsetEntry * inputCharset
   else if (unicodeIn){
     conversionType=FromUnicode;
     kchdebug("Conversion: from unicode\n");
-    if (!createFromUnicodeDict()) return FALSE;
+    //if (!createFromUnicodeDict()) return FALSE;
   }  
   else if (unicodeOut){
     conversionType=ToUnicode;
@@ -108,7 +108,7 @@ bool KCharsetConverterData::initialize(const KCharsetEntry * inputCharset
     conversionType=EightToEight;
     kchdebug("Conversion: no unicode\n");
     if (!getToUnicodeTable()) return FALSE;
-    if (!createFromUnicodeDict()) return FALSE;
+    //if (!createFromUnicodeDict()) return FALSE;
   } 
   return TRUE;
 }					   
