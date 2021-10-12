@@ -33,6 +33,6 @@ git clone http://github.com/Arquivotheca/otde && \
   cd otde
   for i in $(git branch -a | grep remotes | grep -v HEAD | grep -v master); do
     b=$(basename $i)
-    git clone -b $i --single-branch http://github.com/Arquivotheca/otde $i
+    git clone -b $b --single-branch http://github.com/Arquivotheca/otde $b
   done
 ```
